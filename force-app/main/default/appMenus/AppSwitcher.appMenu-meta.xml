@@ -64,4 +64,8 @@
         <name>Joshua_Love</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Mainly_Digital_Onboarding_2</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>
