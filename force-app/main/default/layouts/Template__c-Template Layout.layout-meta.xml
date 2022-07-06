@@ -11,10 +11,6 @@
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Journey__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -55,11 +51,7 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Completed__c</fields>
-        <fields>Estimated_Completion_Date__c</fields>
         <relatedList>Template_Task__c.Template__c</relatedList>
-        <sortField>Estimated_Completion_Date__c</sortField>
-        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

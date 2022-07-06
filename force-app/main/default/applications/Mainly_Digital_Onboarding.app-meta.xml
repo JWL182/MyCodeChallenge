@@ -10,7 +10,7 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
-    <label>Mainly Digital Onboarding 2</label>
+    <label>Mainly Digital Onboarding</label>
     <navType>Standard</navType>
     <tabs>Template__c</tabs>
     <tabs>Journey__c</tabs>
