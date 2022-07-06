@@ -55,9 +55,9 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Completed__c</fields>
         <fields>Estimated_Completion_Date__c</fields>
-        <fields>Completion_Status__c</fields>
-        <relatedList>Task__c.Template__c</relatedList>
+        <relatedList>Template_Task__c.Template__c</relatedList>
         <sortField>Estimated_Completion_Date__c</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>
