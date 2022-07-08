@@ -28,11 +28,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Task__c.Journey__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Task__c.Relative_Days_To_Complete__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -43,17 +38,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Task__c.Template__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Template_Task__c.Requirements__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Template_Task__c.Template__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
@@ -61,6 +46,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Task__c-Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Template_Task__c-Template Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Template__c-Template Layout</layout>
@@ -107,6 +95,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Task__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Template_Task__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

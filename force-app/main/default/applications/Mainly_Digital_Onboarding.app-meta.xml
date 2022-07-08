@@ -4,7 +4,7 @@
         <headerColor>#FDDE11</headerColor>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
-    <description>An app developed for my code challenge.</description>
+    <description>Mainly Digital&apos;s onboarding application for new starters.</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
@@ -15,6 +15,7 @@
     <tabs>Template__c</tabs>
     <tabs>Journey__c</tabs>
     <tabs>Task__c</tabs>
+    <tabs>Template_Task__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mainly_Digital_Onboarding_2_UtilityBar</utilityBar>
 </CustomApplication>
