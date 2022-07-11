@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completion_Status__c</fullName>
+    <description>A formula that provides a completion status on a particular task.</description>
+    <externalId>false</externalId>
+    <formula>IF ( Completed__c = TRUE, &apos;Completed&apos;,
+IF ( TODAY() &gt;  Estimated_Completion_Date__c , &apos;Overdue&apos;, &apos;In Progress&apos;
+
+
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Completion Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
