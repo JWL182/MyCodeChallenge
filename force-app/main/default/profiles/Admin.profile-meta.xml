@@ -41,6 +41,11 @@
         <field>Template_Task__c.Requirements__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Template__c.Template_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Journey__c-Journey Layout</layout>
     </layoutAssignments>
