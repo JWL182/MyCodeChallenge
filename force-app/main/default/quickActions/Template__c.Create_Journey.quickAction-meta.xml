@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Create a new journey from template.</description>
-    <flowDefinition>Create_Journey2</flowDefinition>
+    <flowDefinition>Create_Journey_V3</flowDefinition>
     <label>Create Journey</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>Flow</type>

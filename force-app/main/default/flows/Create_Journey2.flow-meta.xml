@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
+    <assignments>
+        <description>Assigning current template to variable.</description>
+        <name>Current_Template</name>
+        <label>Current Template</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignmentItems>
+            <assignToReference>$Flow.CurrentRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordID.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>templateNameAssignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>templateNameAssignment</name>
+        <label>templateNameAssignment</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>$Flow.CurrentRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>templateName.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Journey</targetReference>
+        </connector>
+    </assignments>
     <interviewLabel>Create_Journey2 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Create_Journey2</label>
+    <label>Create_Journey</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -22,33 +55,11 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
-    <recordLookups>
-        <description>getting current record of template to create journey.</description>
-        <name>currentRecord</name>
-        <label>currentRecord</label>
-        <locationX>176</locationX>
-        <locationY>158</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Create_Journey</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordID.Id</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Template__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <screens>
         <name>Confirmation</name>
         <label>Are you sure you want to proceed?</label>
         <locationX>176</locationX>
-        <locationY>398</locationY>
+        <locationY>518</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -63,15 +74,20 @@
     </screens>
     <screens>
         <name>Create_Journey</name>
-        <label>Create Journey</label>
+        <label>Create a new Journey.</label>
         <locationX>176</locationX>
-        <locationY>278</locationY>
+        <locationY>398</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
             <targetReference>Confirmation</targetReference>
         </connector>
+        <fields>
+            <name>Tname</name>
+            <fieldText>&lt;p&gt;Create a new journey based on the {!templateName.Name} template.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <fields>
             <name>Journey_Name</name>
             <dataType>String</dataType>
@@ -146,13 +162,21 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>currentRecord</targetReference>
+            <targetReference>Current_Template</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <variables>
         <description>CurrentRecord</description>
         <name>recordID</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Template__c</objectType>
+    </variables>
+    <variables>
+        <name>templateName</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
